@@ -25,10 +25,11 @@ The skill is two things: a **passive hook** (runs automatically once installed) 
 |---|---|
 | *(automatic)* | The hook fires on every prompt. No invocation needed once installed. |
 | `/break` or `/break-time` | Show current state: how long the active session has been running, when the next threshold fires, snooze status. |
+| `/break-next` | Show only the next scheduled nudge (when it fires, ETA, whether snooze will mute it). |
 | `/snooze [N]` | Snooze nudges for N minutes (default 60). |
 | `/break-reset` | Reset the active session timer (treat *now* as session start). |
 | `/break-time configure` | Walk the user through editing thresholds in `~/.claude/break-time.conf`. |
-| Natural language: "snooze break-time", "I'm taking a break now", "stop the timer" | Same |
+| Natural language: "snooze break-time", "show next break-time", "when's my next break?", "I'm taking a break now", "stop the timer" | Same |
 
 ### Disable
 Remove the hook block from `~/.claude/settings.json`. The skill files can stay; without the hook wired up, they're inert.
@@ -84,4 +85,5 @@ STYLE=friendly           # friendly | aggressive | poetic
 - `scripts/snooze.sh` — snooze nudges for N minutes
 - `scripts/reset.sh` — reset the active session timer
 - `scripts/state.sh` — print current state (used by `/break`)
+- `scripts/next.sh` — print just the next scheduled nudge (used by `/break-next`)
 - `README.md` — short install instructions
