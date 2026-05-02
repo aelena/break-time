@@ -59,7 +59,7 @@ Read `HOOKS-101.md` for the full beginner-friendly explanation of hooks. It's a 
 ## Files
 
 - `SKILL.md` — skill definition Claude loads
-- `HOOKS-101.md` — **standalone tutorial on writing Claude Code hooks** (publishable)
+- `HOOKS-101.md` — **on writing Claude Code hooks**
 - `example-settings.json` — copy-paste hook config
 - `scripts/check_break.sh` — the hook itself
 - `scripts/snooze.sh` — snooze for N minutes
